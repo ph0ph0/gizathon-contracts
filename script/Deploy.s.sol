@@ -24,7 +24,7 @@ contract DeployScript is Script {
         console2.log("playBackToken contract address", address(playBackToken));
 
         // Set the token address in the signedMinter contract
-        // playBackToken.setGizaAgent(address(playBackToken));
+        playBackToken.setGizaAgent(vm.envAddress("GIZA_AGENT"));
         console2.log("deployerAddress", deployer);
 
         vm.stopBroadcast();
